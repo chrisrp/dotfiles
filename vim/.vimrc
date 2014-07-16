@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 set nocompatible
 syntax on          "enable syntax highlight.
 filetype on        "enable filetype detection
