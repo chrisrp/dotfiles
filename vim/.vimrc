@@ -30,10 +30,33 @@ set wrap linebreak nolist
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-set expandtab
+set expandtab "change tabs to spaces
 set autoindent
 
 if has("autocmd")
   filetype plugin indent on
 endif
+
+"============================
+"remove trailing spaces
+"============================
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfun
+
+autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+"============================
+
+" --------- NERDTree --------------
+"autocmd vimenter * NERDTree
+map <C-t> :NERDTreeToggle <CR>
+
+"fecha o vim se o nerdtree for o único aberto.
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") |q| endif
+
+"ragtag
+let g:ragtag_global_maps=1
 
