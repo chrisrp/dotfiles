@@ -60,3 +60,5 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "ragtag
 let g:ragtag_global_maps=1
 
+"set the indicator at length of 80
+set colorcolumn=80
