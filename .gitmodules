@@ -6,13 +6,13 @@
 	url = https://github.com/tpope/vim-rails.git
 [submodule "vim/bundle/vim-ragtag"]
 	path = vim/bundle/vim-ragtag
-	url = git@github.com:chrisrp/vim-ragtag.git
+	url = https://github.com/chrisrp/vim-ragtag.git
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
 [submodule "vim/bundle/snipmate.vim"]
 	path = vim/bundle/snipmate.vim
-	url = git@github.com:chrisrp/snipmate.vim.git
+	url = https://github.com/chrisrp/snipmate.vim.git
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
