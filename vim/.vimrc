@@ -62,3 +62,9 @@ let g:ragtag_global_maps=1
 
 "set the indicator at length of 80
 set colorcolumn=80
+
+"===================================================================
+" creates new line without entering insert mode
+"===================================================================
+nmap <CR> o<Esc>
+"===================================================================
