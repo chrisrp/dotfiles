@@ -1,0 +1,59 @@
+##########
+# geral
+##########
+snippet mp
+do |el| { $1 }
+endsnippet
+
+snippet init
+def	initialize($1, $2, $3, $4)
+	@$1 = $1
+	@$2 = $2
+	@$3 = $3
+	@$4 = $3
+end
+endsnippet
+
+snippet do
+do |$1|
+	$0
+end
+endsnippet
+
+snippet do
+do
+	$0
+end
+endsnippet
+
+snippet if
+if $1
+	$2
+end
+endsnippet
+
+##########
+# rspec
+##########
+snippet it
+it { expect(${1:subject}).to eql $2 }
+endsnippet
+
+snippet it
+it '$1' do
+	$2
+end
+endsnippet
+
+snippet cont
+context '$1' do
+	$2
+end
+endsnippet
+
+snippet desc
+describe '$1' do
+	$2
+end
+endsnippet
+
