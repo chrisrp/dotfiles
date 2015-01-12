@@ -10,7 +10,7 @@ def	initialize($1, $2, $3, $4)
 	@$1 = $1
 	@$2 = $2
 	@$3 = $3
-	@$4 = $3
+	@$4 = $4
 end
 endsnippet
 
@@ -35,6 +35,11 @@ endsnippet
 ##########
 # rspec
 ##########
+snippet let
+let(:$1) { $2 }
+$0
+endsnippet
+
 snippet it
 it { expect(${1:subject}).to eql $2 }
 endsnippet
