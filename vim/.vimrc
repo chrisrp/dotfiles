@@ -97,3 +97,5 @@ let g:syntastic_javascript_checkers = ['jsl']
 "===================================================================
 set clipboard=unnamed
 "===================================================================
+
+nmap <leader>c :SyntasticCheck rubocop<cr>
