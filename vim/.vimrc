@@ -71,6 +71,7 @@ nmap <CR> o<Esc>
 " Run tests
 "===================================================================
 function! RunSpecs()
+  exec ":w"
   exec ":!rspec --color "
 endfunction
 
@@ -80,6 +81,7 @@ nmap <leader>r :call RunSpecs()<cr>
 " Run features
 "===================================================================
 function! RunFeatures()
+  exec ":w"
   exec ":!rake cucumber"
 endfunction
 
@@ -97,5 +99,13 @@ let g:syntastic_javascript_checkers = ['jsl']
 "===================================================================
 set clipboard=unnamed
 "===================================================================
+nmap <leader>c :SyntasticCheck rubocop<cr> 
+nmap <leader>s :w<cr>
 
-nmap <leader>c :SyntasticCheck rubocop<cr>
+"===================================================================
+function! RunCurrentSpec()
+  exec ":w"
+  exec ":! bundle exec rspec " . @%
+endfunction
+
+nmap <leader>. :call RunCurrentSpec()<cr>
