@@ -13,6 +13,10 @@ set linespace=4
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+"solarized
+set background=dark
+colorscheme solarized
+
 "store lots of :cmdline history
 set history=1000
 
