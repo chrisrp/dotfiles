@@ -12,3 +12,4 @@ alias gps='git push'
 alias g='git'
 alias rubocop='rubocop --formater simple'
 
+alias startx='ssh-agent startx'
