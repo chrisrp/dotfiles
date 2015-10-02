@@ -93,3 +93,6 @@ xterm*scrollTtyOutput: false
 !! white dark/light
 *color7:                S_base2
 *color15:               S_base3
+
+!! askpass theme
+ssh-askpass*background: #000000
