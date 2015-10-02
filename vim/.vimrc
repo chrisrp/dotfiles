@@ -69,29 +69,24 @@ let g:ragtag_global_maps=1
 "set the indicator at length of 80
 set colorcolumn=80
 
-"===================================================================
-" creates new line without entering insert mode
-"===================================================================
+"========== creates new line without entering insert mode
 nmap <CR> o<Esc>
-"===================================================================
-" Run tests
-"===================================================================
+
+"===== Run tests ======================
 function! RunSpecs()
   exec ":w"
   exec ":!rspec --color "
 endfunction
 
-nmap <leader>r :call RunSpecs()<cr>
+nmap <C-r> :call RunSpecs()<cr>
 
-"===================================================================
-" Run features
-"===================================================================
+"====== Run features =========
 function! RunFeatures()
   exec ":w"
   exec ":!rake cucumber"
 endfunction
 
-nmap <leader>f :call RunFeatures()<cr>
+nmap <C-f> :call RunFeatures()<cr>
 
 "===================================================================
 " Enables javascript checkers 
@@ -100,13 +95,14 @@ let g:syntastic_javascript_checkers = ['jsl']
 "===================================================================
 
 
-"===================================================================
-" Share clipboard
-"===================================================================
+"====== Share clipboard
 set clipboard=unnamed
-"===================================================================
+
+"====== Save Ctrl+s
+map <C-s> <esc>:w<cr>
+imap <C-s> <esc>:w<cr>
+
 nmap <leader>c :SyntasticCheck rubocop<cr> 
-nmap <leader>s :w<cr>
 
 "===================================================================
 function! RunCurrentSpec()
@@ -114,4 +110,4 @@ function! RunCurrentSpec()
   exec ":! bundle exec rspec " . @%
 endfunction
 
-nmap <leader>. :call RunCurrentSpec()<cr>
+nmap <C-m> :call RunCurrentSpec()<cr>
