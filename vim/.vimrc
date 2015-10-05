@@ -93,12 +93,8 @@ nmap <C-f> :call RunFeatures()<cr>
 "===================================================================
 let g:syntastic_javascript_checkers = ['jsl']
 "===================================================================
-
-
-"====== Share clipboard
-set clipboard=unnamed
-
 "====== Save Ctrl+s
+map <C-q> <esc>:q<cr>
 map <C-s> <esc>:w<cr>
 imap <C-s> <esc>:w<cr>
 
@@ -110,4 +106,8 @@ function! RunCurrentSpec()
   exec ":! bundle exec rspec " . @%
 endfunction
 
-nmap <C-m> :call RunCurrentSpec()<cr>
+nmap <C-n> :call RunCurrentSpec()<cr>
+
+"====== Share clipboard
+set clipboard=unnamed
+
