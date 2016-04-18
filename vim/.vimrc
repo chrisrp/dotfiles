@@ -53,7 +53,7 @@ fun! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfun
 
-autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,php,ruby,python,cucumber autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 "============================
 
 " --------- NERDTree --------------
@@ -75,7 +75,7 @@ nmap <CR> o<Esc>
 "===== Run tests ======================
 function! RunSpecs()
   exec ":w"
-  exec ":!rspec --color "
+  exec ":! bundle exec rspec --color "
 endfunction
 
 nmap <C-r> :call RunSpecs()<cr>
