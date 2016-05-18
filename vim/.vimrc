@@ -109,4 +109,4 @@ endfunction
 nmap <C-n> :call RunCurrentSpec()<cr>
 
 "====== Share clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
