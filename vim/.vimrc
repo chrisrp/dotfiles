@@ -109,4 +109,8 @@ endfunction
 nmap <C-n> :call RunCurrentSpec()<cr>
 
 "====== Share clipboard
-set clipboard=unnamedplus
+if system("uname") == "Darwin"
+  set clipboard=unnamed
+else
+  set clipboard=unnamedplus
+endif
