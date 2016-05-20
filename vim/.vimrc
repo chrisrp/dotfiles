@@ -60,9 +60,12 @@ autocmd FileType c,cpp,java,php,ruby,python,cucumber autocmd BufWritePre <buffer
 "autocmd vimenter * NERDTree
 map <C-t> :NERDTreeToggle <CR>
 
+
+
 "fecha o vim se o nerdtree for o único aberto.
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") |q| endif
 
+let g:NERDTreeShowHidden=1
 "ragtag
 let g:ragtag_global_maps=1
 
