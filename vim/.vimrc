@@ -111,7 +111,8 @@ endfunction
 nmap <C-n> :call RunCurrentSpec()<cr>
 
 "====== Share clipboard
-if system("uname") == "Darwin"
+let s:uname = substitute(system("uname"), '\n\+$', '', '')
+if s:uname == "Darwin"
   set clipboard=unnamed
 else
   set clipboard=unnamedplus

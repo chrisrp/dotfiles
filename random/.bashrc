@@ -11,14 +11,10 @@ stty stop undef
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-source /usr/share/git/completion/git-prompt.sh
+source ~/dotfiles/random/.git-prompt.sh
+source ~/dotfiles/random/.bash_aliases
 
-# Bash completion
-if [ -f /usr/share/git/completion ]; then
-  . /usr/share/git
-fi
-
-# Bash completion
+# load OS specific aliases overwriting previous aliases
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
