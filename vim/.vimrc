@@ -1,11 +1,23 @@
 execute pathogen#infect()
 
 set nocompatible
+
 syntax on          "enable syntax highlight.
 filetype on        "enable filetype detection
 filetype indent on "enable file type specific indenting
 filetype plugin on "enable file type specific plugins
 
+"indent settings
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab "change tabs to spaces
+set autoindent
+set smartindent
+
+if has("autocmd")
+  filetype plugin indent on
+endif
 
 "add some line space for easy reading
 set linespace=4
@@ -20,7 +32,7 @@ set t_Co=256                        " force vim to use 256 colors
 let g:solarized_termcolors=256      " use solarized 256 fallback
 
 "store lots of :cmdline history
-set history=1000
+set history=500
 
 set showcmd "show incomplete cmds down the bottom
 set showmode "show current mode down the bottom
@@ -32,16 +44,6 @@ set number "add line numbers
 set showbreak=...
 set wrap linebreak nolist
 
-"indent settings
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab "change tabs to spaces
-set autoindent
-
-if has("autocmd")
-  filetype plugin indent on
-endif
 
 "============================
 "remove trailing spaces
@@ -98,7 +100,7 @@ map <C-q> <esc>:q<cr>
 map <C-s> <esc>:w<cr>
 imap <C-s> <esc>:w<cr>
 
-nmap <leader>c :SyntasticCheck rubocop<cr> 
+nmap <leader>c :RuboCop<cr> 
 
 "===================================================================
 function! RunCurrentSpec()
