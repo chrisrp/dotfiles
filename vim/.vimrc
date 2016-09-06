@@ -103,6 +103,12 @@ imap <C-s> <esc>:w<cr>
 nmap <leader>c :RuboCop<cr> 
 
 "===================================================================
+" splits the pane vertical and horizontal
+"===================================================================
+nnoremap <silent> vv <C-w>v
+nnoremap <silent> ss <C-w>s
+
+"===================================================================
 function! RunCurrentSpec()
   exec ":w"
   exec ":! bundle exec rspec " . @%
