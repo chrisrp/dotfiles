@@ -13,3 +13,11 @@ alias g='git'
 alias rubocop='rubocop --format simple'
 
 alias startx='ssh-agent startx'
+
+if [ "$(uname)" = "Darwin" ]
+then
+  alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
+  alias ls="ls -al"
+fi
+
+

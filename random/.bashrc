@@ -29,4 +29,10 @@ export PATH="$PATH:/usr/local/heroku/bin"
 export TERM="screen-256color"
 alias tmux="tmux -2"
 
-export EDITOR="vim"
+if [ "$(uname)" = "Darwin" ]
+then
+  export EDITOR="/Applications/MacVim.app/Contents/MacOS/Vim"
+else
+  export EDITOR="vim"
+fi
+
