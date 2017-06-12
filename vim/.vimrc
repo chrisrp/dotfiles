@@ -123,3 +123,5 @@ if s:uname == "Darwin"
 else
   set clipboard=unnamedplus
 endif
+
+let g:elm_format_autosave=1
