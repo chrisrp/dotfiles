@@ -20,4 +20,7 @@ then
   alias ls="ls -al"
 fi
 
-
+# Kubernetes
+alias k8s-a='kubectl config use-context prod-eu-central-1a.cloud.shore.com'
+alias k8s-b='kubectl config use-context prod-eu-central-1b.cloud.shore.com'
+alias k8s-c='kubectl config use-context staging-eu-central-1c.cloud.shore.com'

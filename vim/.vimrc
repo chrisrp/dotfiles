@@ -26,7 +26,7 @@ set linespace=4
 set backspace=indent,eol,start
 
 "solarized
-set background=light
+set background=dark
 colorscheme solarized
 set t_Co=256                        " force vim to use 256 colors
 let g:solarized_termcolors=256      " use solarized 256 fallback
@@ -68,8 +68,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 "ragtag
 let g:ragtag_global_maps=1
 
-"set the indicator at length of 80
-set colorcolumn=80
+"set the indicator at length of 100
+set colorcolumn=100
 
 "========== creates new line without entering insert mode
 nmap <CR> o<Esc>
@@ -125,3 +125,17 @@ else
 endif
 
 let g:elm_format_autosave=1
+
+"===================================================================
+" splits the pane vertical and horizontal
+"===================================================================
+"
+let g:ale_linters = {
+\  'ruby': ['rubocop', 'ruby', 'brakeman'],
+\  'elixir': ['credo'],
+\  'elm': ['format'],
+\  'javascript': ['eslint']
+\}
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_enter = 0
+"===================================================================
