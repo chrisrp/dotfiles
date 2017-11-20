@@ -28,3 +28,9 @@
 [submodule "vim/bundle/ale"]
 	path = vim/bundle/ale
 	url = https://github.com/w0rp/ale.git
+[submodule "vim/bundle/vim-test"]
+	path = vim/bundle/vim-test
+	url = https://github.com/janko-m/vim-test
+[submodule "vim/bundle/vim-projectionist"]
+	path = vim/bundle/vim-projectionist
+	url = https://github.com/tpope/vim-projectionist

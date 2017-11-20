@@ -80,7 +80,7 @@ function! RunSpecs()
   exec ":! bundle exec rspec --color "
 endfunction
 
-nmap <C-r> :call RunSpecs()<cr>
+" nmap <C-r> :call RunSpecs()<cr>
 
 "====== Run features =========
 function! RunFeatures()
@@ -114,7 +114,7 @@ function! RunCurrentSpec()
   exec ":! bundle exec rspec " . @%
 endfunction
 
-nmap <C-n> :call RunCurrentSpec()<cr>
+" nmap <C-n> :call RunCurrentSpec()<cr>
 
 "====== Share clipboard
 let s:uname = substitute(system("uname"), '\n\+$', '', '')
@@ -136,6 +136,17 @@ let g:ale_linters = {
 \  'elm': ['format'],
 \  'javascript': ['eslint']
 \}
-let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 0
 "===================================================================
+" https://github.com/janko-m/vim-test
+"
+ " runs the test nearest to the cursor
+ nmap <C-n> :w<CR> :TestNearest <cr>
+
+ " runs all tests in the current file
+ nmap <C-k> :w<CR> :TestFile <CR>
+
+ " runs the whole test suite
+ nmap <C-r> :w<CR> :TestSuite <cr>
