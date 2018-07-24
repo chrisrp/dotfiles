@@ -124,7 +124,7 @@ else
   set clipboard=unnamedplus
 endif
 
-let g:elm_format_autosave=1
+"let g:elm_format_autosave=1
 
 "===================================================================
 " splits the pane vertical and horizontal
@@ -150,3 +150,10 @@ let g:ale_lint_on_save = 0
 
  " runs the whole test suite
  nmap <C-r> :w<CR> :TestSuite <cr>
+
+set rtp+=/usr/local/opt/fzf
+
+"===================================================================
+" Use FZF instead of ctrl-p
+"===================================================================
+nmap <C-p> :FZF<CR>

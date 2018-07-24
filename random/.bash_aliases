@@ -24,3 +24,19 @@ fi
 alias k8s-a='kubectl config use-context prod-eu-central-1a.cloud.shore.com'
 alias k8s-b='kubectl config use-context prod-eu-central-1b.cloud.shore.com'
 alias k8s-c='kubectl config use-context staging-eu-central-1c.cloud.shore.com'
+
+function lscon(){
+  kubectl -n shore get pods | grep $1
+}
+
+function conrails(){
+  kubectl -n shore exec -ti $1 rails c
+}
+
+function contrake(){
+  kubectl -n shore exec -ti $1 rake console
+}
+
+function date_file(){
+  touch `date '+%Y_%m_%d.txt'`
+ }
