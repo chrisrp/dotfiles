@@ -124,7 +124,7 @@ else
   set clipboard=unnamedplus
 endif
 
-let g:elm_format_autosave=1
+"let g:elm_format_autosave=1
 
 "===================================================================
 " Linter
@@ -149,7 +149,12 @@ let g:ale_lint_on_save = 0
  nmap <C-k> :w<CR> :TestFile <CR>
 
  " runs the whole test suite
- nmap <C-i> :w<CR> :TestSuite <cr>
- "=============================================
-let g:ackprg = 'ag --vimgrep'
+ nmap <C-r> :w<CR> :TestSuite <cr>
 
+"===================================================================
+" Use FZF instead of ctrl-p
+"===================================================================
+set rtp+=/usr/local/opt/fzf
+nmap <C-p> :FZF<CR>
+
+let g:ackprg = 'ag --vimgrep'
