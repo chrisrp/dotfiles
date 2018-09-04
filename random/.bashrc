@@ -36,3 +36,5 @@ else
   export EDITOR="vim"
 fi
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
