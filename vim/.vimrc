@@ -55,7 +55,7 @@ fun! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfun
 
-autocmd FileType c,cpp,java,php,ruby,python,cucumber autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,php,ruby,python,cucumber,elixir autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 "============================
 
 " --------- NERDTree --------------
@@ -156,6 +156,8 @@ let g:ale_lint_on_save = 0
 "===================================================================
 set rtp+=/usr/local/opt/fzf
 nmap <C-p> :FZF<CR>
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/_build/*,*.beam
 
 
 nmap <leader>f :Ack <C-R>=expand("<cword>")<cr><cr>

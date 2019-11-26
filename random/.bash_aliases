@@ -21,9 +21,8 @@ then
 fi
 
 # Kubernetes
-alias k8s-c='kubectl config use-context staging-eu-central-1c.cloud.shore.com'
-alias k8s-a='kubectl config use-context prod-eu-central-1a.cloud.shore.com'
-                                        
+alias k8s-c='kubectl config use-context arn:aws:eks:eu-central-1:448433501390:cluster/staging'
+alias k8s-a='kubectl config use-context arn:aws:eks:eu-central-1:448433501390:cluster/production'
 
 function lscon(){
   kubectl -n shore get pods | grep $1
@@ -34,7 +33,7 @@ function conrails(){
 }
 
 function conrake(){
-  kubectl -n shore exec -ti $1 rake console
+  kubectl -n shore exec -ti $1 bundle exec rake console
 }
 
 function date_file(){
