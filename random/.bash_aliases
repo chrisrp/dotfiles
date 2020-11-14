@@ -21,8 +21,8 @@ then
 fi
 
 # Kubernetes
-alias k8s-c='kubectl config use-context arn:aws:eks:eu-central-1:448433501390:cluster/staging'
-alias k8s-a='kubectl config use-context arn:aws:eks:eu-central-1:448433501390:cluster/production'
+alias k8s-c='kubectl config use-context arn:aws:eks:eu-central-1:448433501390:cluster/stage'
+alias k8s-a='kubectl config use-context arn:aws:eks:eu-central-1:448433501390:cluster/prod'
 
 function lscon(){
   kubectl -n shore get pods | grep $1
