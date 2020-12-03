@@ -43,8 +43,6 @@ set hlsearch "hilight searches by default
 set number "add line numbers
 set showbreak=...
 set wrap linebreak nolist
-
-
 "============================
 "remove trailing spaces
 "============================
@@ -161,3 +159,11 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/_build/*,*.beam
 
 
 nmap <leader>f :Ack <C-R>=expand("<cword>")<cr><cr>
+"===================================================================
+" format json
+"===================================================================
+function! Format()
+  exec ":%!jq ."
+endfunction
+
+nmap <leader>j :call Format()<cr>
