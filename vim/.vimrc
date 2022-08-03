@@ -1,4 +1,5 @@
-execute pathogen#infect()
+"source ~/dotfiles/vim/autoload/pathogen.vim
+"execute pathogen#infect()
 
 set nocompatible
 
@@ -14,6 +15,7 @@ set softtabstop=2
 set expandtab "change tabs to spaces
 set autoindent
 set smartindent
+set ruler
 
 if has("autocmd")
   filetype plugin indent on
@@ -152,10 +154,10 @@ let g:ale_lint_on_save = 0
 "===================================================================
 " Use FZF instead of ctrl-p
 "===================================================================
-set rtp+=/usr/local/opt/fzf
-nmap <C-p> :FZF<CR>
-
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/_build/*,*.beam
+" set rtp+=/usr/local/opt/fzf
+" nmap <C-p> :FZF<CR>
+" 
+" set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/_build/*,*.beam
 
 
 nmap <leader>f :Ack <C-R>=expand("<cword>")<cr><cr>
@@ -167,3 +169,12 @@ function! Format()
 endfunction
 
 nmap <leader>j :call Format()<cr>
+
+"===================================================================
+set wildignore+=*/tmp/*,*/_build/*,*/deps/*,*.swp,*.zip 
+
+"let g:ctrlp_custom_ignore = {
+"  \ 'dir':  '\v[\/]\.(git|_build|deps|svn)$',
+"  \ 'file': '\v\.(exe|so|dll)$',
+"  \ 'link': 'some_bad_symbolic_links',
+"  \ }

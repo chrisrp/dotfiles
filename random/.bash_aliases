@@ -4,7 +4,7 @@ alias ls='ls -al --color=auto'
 # dev
 alias bex='bundle exec'
 alias bi='bundle install'
-alias go='git checkout'
+alias got='git checkout'
 alias gc='git commit'
 alias gp='git pull'
 alias gss='git status'
@@ -21,7 +21,7 @@ then
 fi
 
 # Kubernetes
-alias k8s-c='kubectl config use-context arn:aws:eks:eu-central-1:448433501390:cluster/stage'
+alias k8s-c='kubectl config use-context arn:aws:eks:eu-central-1:448433501390:cluster/staging'
 alias k8s-a='kubectl config use-context arn:aws:eks:eu-central-1:448433501390:cluster/prod'
 
 function lscon(){
