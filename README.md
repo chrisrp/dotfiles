@@ -1,13 +1,39 @@
 dotfiles
 ========
 
-git clone this repo, init and update the submodules
+git clone this repo and download plugins
 
 ```
 cd dotfiles
-git submodule init
-git submodule update
+mkdir .config/nvim/pack/vendor/start
 
+git clone --depth 1 plugins/repos
+```
+
+Repos to clone:
+ack.vim
+nerdtree
+vim-colors-solarized
+vim-elixir
+vim-rails
+vim-rubocop
+
+to evaluate:
+ultisnipts
+vim-test
+
+Create the init.vim file
+```
+touch .config/nvim/init.vim
+```
+
+Add the following
+
+```
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath = &runtimepath
+
+source ~/dotfiles/vim/.vimrc
 ```
 
 Backup the original OS files
@@ -15,11 +41,6 @@ Backup the original OS files
 ```
 cp .bashrc .bashrc_original
 cp .bash_aliases .bash_aliases_original
-```
-
-Create the .vimrc file
-```
-echo "source ~/dotfiles/vim/.vimrc" > .vimrc
 ```
 
 Create the symbolic link to dotfiles
