@@ -29,11 +29,15 @@ function lscon(){
 }
 
 function conrails(){
-  kubectl -n shore exec -ti $1 rails c
+  kubectl -n shore exec $1 -- rails c
 }
 
 function conrake(){
-  kubectl -n shore exec -ti $1 bundle exec rake console
+  kubectl -n shore exec $1 -- bundle exec rake console
+}
+
+function conshell(){
+  kubectl -n shore exec $1 -- /bin/sh
 }
 
 function date_file(){
